@@ -1,17 +1,28 @@
+import { Link, useNavigate } from "react-router-dom";
+import s from "./NavBar.module.css";
+
 
 const NavBar = () => {
-    return ( 
-        <nav className="NavBar">
-        <a href="..." >
-          <img src="/weblogo.png" className="logo" alt="Hype logo" />
-        </a>
-        <ul className="NavBar">
-            <li><a href="...">Juegos</a></li>
-            <li><a href="...">Informacion</a></li>
-            <li><a href="...">FAQ</a></li>
-        </ul>
-        </nav>
-    )
-}
+  const navigate = useNavigate();
+  return (
+    <nav className={s.NavBar}>
+      <Link to="/">
+        <img src="/weblogo.png" className="logo" alt="Hype logo" />
+      </Link>
 
-export default NavBar
+      <ul>
+        <li className={s.items} onClick={() => navigate("/Accion")}>
+          Accion
+        </li>
+        <li className={s.items} onClick={() => navigate("/Deportes")}>
+          Deportes
+        </li>
+        <li className={s.items} onClick={() => navigate("/Aventura")}>
+          Aventura
+        </li>
+      </ul>
+    </nav>
+  );
+};
+
+export default NavBar;

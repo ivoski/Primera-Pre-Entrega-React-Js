@@ -1,0 +1,13 @@
+.items{
+    cursor: pointer;
+    padding: 1rem;
+    background-color: #121212;
+    display: inline-block;
+}
+
+ul{
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    list-style: none;
+}
