@@ -1,0 +1,20 @@
+.cart {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
+  transition: all .5s ease;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: rgb(255, 123, 0);
+  color: #000;
+}
+
+.cart span{
+  font-weight: bold;
+}
+
+.cart:hover {
+  background-color: orange;
+
+}

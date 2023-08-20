@@ -1,12 +1,17 @@
-
+import { useNavigate } from "react-router-dom";
+import { useCart } from "../../context/cartContext";
+import "./cart.css";
 
 const CartWidget = () => {
-    return (
-        <div className="cart">
-            <img src="/cart.svg"  alt="Carrito de compras" />
-            33
-        </div>
-    )
-}
+  const { cart } = useCart();
+  const navigate = useNavigate();
 
-export default CartWidget
+  return (
+    <div className="cart" onClick={() => navigate("/cart")}>
+      <img src="/cart.svg" alt="Carrito de compras" />
+      <span>{cart.length}</span>
+    </div>
+  );
+};
+
+export default CartWidget;
